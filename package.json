@@ -1,0 +1,45 @@
+{
+  "name": "bfx-api-node-mock-data",
+  "version": "1.0.0",
+  "description": "Bitfinex Mock Data Generator for Node.JS - Bitcoin, Ethereum, Ripple and more",
+  "engines": {
+    "node": ">=7"
+  },
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard",
+    "test": "npm run lint && npm run unit",
+    "unit": "NODE_ENV=test mocha -b --recursive",
+    "api_docs": "node_modules/jsdoc-to-markdown/bin/cli.js lib/auth/*.js lib/public/*.js lib/util/*.js > docs/api.md",
+    "docs": "npm run api_docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bitfinexcom/bfx-api-node-mock-data.git"
+  },
+  "keywords": [
+    "bitfinex",
+    "bitcoin",
+    "BTC"
+  ],
+  "contributors": [
+    "Cris Mihalache <cris.m@bitfinex.com> (https://www.bitfinex.com)"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bitfinexcom/bfx-api-node-mock-data/issues"
+  },
+  "dependencies": {
+    "bfx-api-node-util": "^1.0.8",
+    "bfx-hf-util": "^1.0.5",
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "bfx-api-node-models": "^1.1.6",
+    "debug": "^4.1.1",
+    "jsdoc-to-markdown": "^5.0.3",
+    "mocha": "^7.0.1",
+    "nyc": "^15.0.0",
+    "standard": "^14.3.1"
+  }
+}
